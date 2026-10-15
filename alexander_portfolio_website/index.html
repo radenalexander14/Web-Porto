@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Personal portfolio of Raden Alexander Christianace Deventa Willy Putra - IT Specialist | Cyber Security , Computer Science and Cyber Security student."
+  />
+  <title>RADEN ALEXANDER | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhance.css" />
+  <link rel="stylesheet" href="interactive.css" />
+</head>
+
+<body>
+  <!-- Ambient Interactive Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">RADEN ALEXANDER<span>.</span></a>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Search & Quick Action Trigger -->
+        <button type="button" class="nav-search-btn" id="cmdPaletteBtn" aria-label="Search portfolio" title="Search or jump to... (Ctrl + K)">
+          <svg class="search-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-text">Search...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Language Switcher -->
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
+          <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">☾</span>
+        </button>
+
+        <!-- Mobile Navigation Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1>
+            Raden Alexander
+            <span>Christianace</span>
+          </h1>
+
+          <h2><span id="typed">IT Specialist | Cyber Security</span><span class="caret"></span></h2>
+
+          <p class="hero-description">
+            Computer Science student focusing on Cyber Security, Web Development,
+            Java programming, multimedia, and digital creative work.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <button type="button" class="btn btn-outline" id="heroTerminalBtn" onclick="CyberTerminal.open()">Launch Cyber Terminal &gt;_</button>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/radenalexander/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/radenalexander14" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://instagram.com/christian.alxnd" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card" id="profileCard">
+            <!-- Profile Photo with HUD elements -->
+            <div class="profile-photo" id="profilePhotoWrap" title="Click to trigger biometric laser scan">
+              <img src="assets/profil/p2.jpeg" id="profileImg" alt="Raden Alexander" />
+              
+              <!-- Cyber HUD Framing & Corners -->
+              <div class="photo-hud-frame">
+                <div class="hud-corner tl"></div>
+                <div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div>
+                <div class="hud-corner br"></div>
+              </div>
+
+              <!-- Animated Laser Scanner Line -->
+              <div class="laser-scan-line" id="laserScanLine"></div>
+            </div>
+
+            <!-- Interactive Floating Tags -->
+            <div class="floating-tag tag-1" data-info="Java • Laravel • Python • Fullstack Web" title="Click to view Developer stack">
+              <span>&lt;/&gt; Developer</span>
+              <span class="tag-subtext">Java • Web • Py</span>
+            </div>
+            <div class="floating-tag tag-2" data-info="Nmap • Linux • Vulnerability Assessment • Recon" title="Click to view Security focus">
+              <span>Cyber Security</span>
+              <span class="tag-subtext">Nmap • Pentest • Linux</span>
+            </div>
+            <div class="floating-tag tag-3" data-info="Drone Pilot • Studio Photography • UI/UX" title="Click to view Creative skills">
+              <span>Creative</span>
+              <span class="tag-subtext">Drone • Photo • UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>About Me</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a Computer Science student with a strong interest in
+              <strong>Cyber Security, software development, web design, and multimedia.</strong>
+            </p>
+
+            <p>
+              I enjoy learning how systems work, building applications, solving technical
+              problems, and combining technology with creative ideas.
+            </p>
+
+            <p>
+              My current focus includes web development, Java programming, information
+              gathering, cybersecurity automation, and AI-based applications.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <h3>2024</h3>
+              <p>Started Computer Science</p>
+            </div>
+
+            <div class="stat-card">
+              <h3><span data-count="3.22" data-decimals="2">3.22</span></h3>
+              <p>Current GPA</p>
+            </div>
+
+            <div class="stat-card">
+              <h3><span data-count="5" data-suffix="+">5+</span></h3>
+              <p>Fields of Interest</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>∞</h3>
+              <p>Things to Learn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Skills & Tools</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌘</div>
+            <h3>Cyber Security</h3>
+            <p>Nmap, information gathering, basic vulnerability analysis, networking.</p>
+            <div class="skill-tags">
+              <span>Nmap</span>
+              <span>Linux</span>
+              <span>Networking</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">&lt;/&gt;</div>
+            <h3>Web Development</h3>
+            <p>Building responsive websites and web applications.</p>
+            <div class="skill-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>Laravel</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">J</div>
+            <h3>Java Development</h3>
+            <p>Object-oriented programming, desktop GUI, and database applications.</p>
+            <div class="skill-tags">
+              <span>Java</span>
+              <span>OOP</span>
+              <span>MySQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">AI</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Exploring NLP, translation systems, OCR, and AI-assisted automation.</p>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>FastAPI</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✦</div>
+            <h3>Design</h3>
+            <p>Creating visual concepts, website layouts, posters, and digital content.</p>
+            <div class="skill-tags">
+              <span>Figma</span>
+              <span>Canva</span>
+              <span>UI Design</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✎</div>
+            <h3>Content & Writing</h3>
+            <p>Content planning, writing, documentation, and digital communication.</p>
+            <div class="skill-tags">
+              <span>Writing</span>
+              <span>Content</span>
+              <span>Research</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Selected Projects</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="filter-bar reveal" id="filterBar">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="ai">AI</button>
+          <button class="chip" data-filter="security">Security</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="research">Research</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured reveal" data-cat="ai">
+            <div class="project-top">
+              <span class="project-label">Featured Project</span>
+              <span class="project-number">01</span>
+            </div>
+
+            <h3>Indonesia ↔ Banjar AI Translator</h3>
+            <p>
+              Neural Machine Translation application for Indonesian and Banjar languages,
+              supported by OCR and a web-based interface.
+            </p>
+
+            <div class="project-tech">
+              <span>PyTorch</span>
+              <span>Transformer</span>
+              <span>FastAPI</span>
+              <span>React</span>
+              <span>OCR</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#interactive-labs" style="color:var(--accent); font-weight:800;">⚡ Try Live AI Demo</a>
+              <a href="https://github.com/radenalexander14" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cat="security">
+            <div class="project-top">
+              <span class="project-label">Cyber Security</span>
+              <span class="project-number">02</span>
+            </div>
+
+            <h3>Information Gathering Automation</h3>
+            <p>
+              Concept framework that combines Nmap scanning, vulnerability database
+              fetching, and AI-assisted analysis.
+            </p>
+
+            <div class="project-tech">
+              <span>Nmap</span>
+              <span>AI Agent</span>
+              <span>Vulnerability DB</span>
+            </div>
+
+            <div class="project-links">
+              <!-- TODO: ganti link di bawah dengan link Google Drive project Information Gathering Automation -->
+              <a href="https://drive.google.com/drive/folders/1yEDBuwXWWwpn9SUhVV5LIctA8aO1ZApP?usp=drive_link" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cat="research">
+            <div class="project-top">
+              <span class="project-label">Research</span>
+              <span class="project-number">03</span>
+            </div>
+
+            <h3>Healthcare Website Accessibility</h3>
+            <p>
+              Evaluation of Indonesian healthcare websites based on WCAG 2.1 Level AA
+              using automated and manual testing.
+            </p>
+
+            <div class="project-tech">
+              <span>WCAG 2.1</span>
+              <span>WAVE</span>
+              <span>Axe DevTools</span>
+            </div>
+
+            <div class="project-links">
+              <!-- TODO: ganti link di bawah dengan link project Healthcare Website Accessibility -->
+              <a href="https://binusianorg-my.sharepoint.com/personal/vincent_tiono_binus_ac_id/_layouts/15/guestaccess.aspx?share=IgAyvmbXGU9UQpFOv80cmgKKAShskAEnxMaC5d7m85xKo5c&e=ysO2tz" target="_blank" rel="noopener noreferrer">Read More ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cat="web">
+            <div class="project-top">
+              <span class="project-label">Web Development</span>
+              <span class="project-number">04</span>
+            </div>
+
+            <h3>Laravel Web Application</h3>
+            <p>
+              Web application built with Laravel and MySQL featuring authentication,
+              database integration, and front-end asset management.
+            </p>
+
+            <div class="project-tech">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Vite</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/radenalexander14" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: INTERACTIVE LABS & DEMOS -->
+    <section class="section interactive-section" id="interactive-labs">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Interactive Labs & Demos</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <p class="reveal" style="color: var(--muted); margin-top: -30px; margin-bottom: 30px; max-width: 650px;">
+          Explore real-time simulated AI, cybersecurity reconnaissance, and Java code execution directly in your browser.
+        </p>
+
+        <!-- Lab Tabs Switcher -->
+        <div class="lab-tabs reveal">
+          <button type="button" class="lab-tab-btn active" data-panel="panel-ai">
+            <span>🤖</span>
+            <span>AI Translator Simulator</span>
+          </button>
+          <button type="button" class="lab-tab-btn" data-panel="panel-cyber">
+            <span>🛡️</span>
+            <span>Cyber Security Lab</span>
+          </button>
+          <button type="button" class="lab-tab-btn" data-panel="panel-java">
+            <span>☕</span>
+            <span>Java OOP Playground</span>
+          </button>
+        </div>
+
+        <!-- PANEL 1: AI TRANSLATOR SIMULATOR -->
+        <div class="lab-panel active reveal" id="panel-ai">
+          <div class="ai-sim-grid">
+            <!-- Source Input -->
+            <div class="ai-box">
+              <div class="ai-box-header">
+                <span class="ai-box-lang">SOURCE (INDONESIAN)</span>
+                <span style="font-size: 0.76rem; color: var(--muted)">Neural Tokenizer</span>
+              </div>
+              <textarea class="ai-textarea" id="aiInputText" placeholder="Ketik kalimat bahasa Indonesia di sini...">Halo, apa kabar?</textarea>
+              
+              <div class="ai-presets">
+                <span style="font-size: 0.72rem; color: var(--muted); align-self:center;">Sample Presets:</span>
+                <button type="button" class="ai-preset-chip" data-text="Halo, apa kabar?">Halo apa kabar</button>
+                <button type="button" class="ai-preset-chip" data-text="Terima kasih banyak">Terima kasih</button>
+                <button type="button" class="ai-preset-chip" data-text="Saya sedang belajar pemrograman">Belajar pemrograman</button>
+                <button type="button" class="ai-preset-chip" data-text="Makan bersama teman-teman">Makan bersama kawan</button>
+                <button type="button" class="ai-preset-chip" data-text="Sampai jumpa lagi">Sampai jumpa lagi</button>
+              </div>
+            </div>
+
+            <!-- Target Output -->
+            <div class="ai-box">
+              <div class="ai-box-header">
+                <span class="ai-box-lang">TARGET (BANJAR)</span>
+                <span style="font-size: 0.76rem; color: var(--neon-cyan)">Transformer Decoder</span>
+              </div>
+              <div class="ai-output-box" id="aiOutputText">Halo, kaya apa habar?</div>
+
+              <div class="ai-presets" style="margin-top:auto;">
+                <button type="button" class="ai-preset-chip" onclick="navigator.clipboard.writeText(document.getElementById('aiOutputText').textContent); document.getElementById('toast').textContent='Banjar translation copied!'; document.getElementById('toast').classList.add('show'); setTimeout(()=>document.getElementById('toast').classList.remove('show'),2000);">📋 Copy Translation</button>
+              </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="ai-sim-actions">
+              <button type="button" class="btn btn-primary" id="aiTranslateBtn" style="padding: 0 28px;">
+                <span>Translate with Neural Model</span>
+                <span style="margin-left: 8px;">⚡</span>
+              </button>
+
+              <div class="ai-meta-metrics">
+                <div>Model: <strong>PyTorch Transformer-v2.1</strong></div>
+                <div>Confidence: <strong id="aiConfidenceVal">98.6%</strong></div>
+                <div>Inference: <strong id="aiLatencyVal">22ms</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 2: CYBER SECURITY LAB -->
+        <div class="lab-panel reveal" id="panel-cyber">
+          <div class="cyber-lab-grid">
+            <!-- Sub-widget: Password Entropy & Threat Meter -->
+            <div class="cyber-card">
+              <h3>
+                <span>🔐</span>
+                <span>Password Entropy & Threat Shield</span>
+              </h3>
+              <p class="desc">Calculate Shannon entropy and brute-force cracking resistance in real time.</p>
+
+              <div class="entropy-input-wrap">
+                <input type="text" class="entropy-input" id="entropyInput" placeholder="Type password or token to test..." value="Alexander@CyberSec#2026" />
+              </div>
+
+              <div class="entropy-meter">
+                <div class="entropy-meter-bar" id="entropyBar" style="width: 82%; background: var(--neon-green);"></div>
+              </div>
+
+              <div style="font-size: 0.84rem; font-weight: 700; margin-bottom: 12px;">
+                Status: <span id="entropyRating" style="color: var(--neon-green)">Hardened / Military-Grade Shield</span>
+              </div>
+
+              <div class="entropy-stats-grid">
+                <div class="entropy-stat-item">
+                  <span>Shannon Entropy</span>
+                  <strong id="entropyBits">76 bits</strong>
+                </div>
+                <div class="entropy-stat-item">
+                  <span>Crack Resistance</span>
+                  <strong id="crackTime">10,000+ years</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-widget: Nmap Port Recon Simulator -->
+            <div class="cyber-card">
+              <h3>
+                <span>📡</span>
+                <span>Reconnaissance Port Scanner</span>
+              </h3>
+              <p class="desc">Simulate Nmap stealth SYN port discovery and vulnerability analysis.</p>
+
+              <div class="scanner-controls">
+                <select class="scanner-select" id="scanTargetSelect">
+                  <option value="192.168.1.10 (internal-srv)">Target: 192.168.1.10 (Internal Server)</option>
+                  <option value="api.alexander-cluster.io">Target: api.alexander-cluster.io (FastAPI)</option>
+                  <option value="sec-lab.gateway.corp">Target: sec-lab.gateway.corp (DMZ)</option>
+                </select>
+                <button type="button" class="btn btn-primary" id="startScanBtn" style="min-height: 44px; padding: 0 18px;">Launch Recon</button>
+              </div>
+
+              <div class="scanner-log" id="scannerLog">
+<span style="color:var(--neon-cyan)">[>] Ready. Select a target and click "Launch Recon".</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 3: JAVA OOP PLAYGROUND -->
+        <div class="lab-panel reveal" id="panel-java">
+          <div class="java-runner-box">
+            <div class="java-toolbar">
+              <div class="java-snippet-selector">
+                <button type="button" class="java-btn-pill active" data-snippet="oop">1. OOP Polymorphism</button>
+                <button type="button" class="java-btn-pill" data-snippet="hash">2. SHA-256 Hash Stream</button>
+                <button type="button" class="java-btn-pill" data-snippet="tree">3. Binary Search Tree</button>
+                <button type="button" class="java-btn-pill" data-snippet="custom">✍️ Program Anda</button>
+              </div>
+
+              <div class="java-actions-bar">
+                <button type="button" class="btn btn-outline" id="resetJavaBtn" style="min-height: 38px; padding: 0 14px; font-size: 0.8rem;">
+                  <span>↺ Reset</span>
+                </button>
+                <button type="button" class="btn btn-primary" id="runJavaBtn" style="min-height: 38px; padding: 0 20px;">
+                  <span>▶ Run Java Code</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="java-editor-split">
+              <!-- Editable Code Editor Area with Line Numbers -->
+              <div class="java-editor-container">
+                <div class="java-line-numbers" id="javaLineNumbers">1</div>
+                <textarea class="java-code-textarea" id="javaCodeInput" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Ketik atau edit kode Java Anda di sini...">// Java OOP: Inheritance &amp; Polymorphism
+abstract class SecurityService {
+    protected String serviceName;
+    public SecurityService(String name) { this.serviceName = name; }
+    public abstract void auditSecurity();
+}
+
+class WebFirewall extends SecurityService {
+    public WebFirewall() { super("Cloudflare WAF"); }
+    @Override
+    public void auditSecurity() {
+        System.out.println("[*] " + serviceName + ": Inspecting HTTP packets...");
+        System.out.println("[✓] Zero SQL Injection or XSS threats detected.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("BNCC Java Program Execution:");
+        SecurityService waf = new WebFirewall();
+        waf.auditSecurity();
+    }
+}</textarea>
+              </div>
+
+              <!-- Console Output -->
+              <div class="java-console-output">
+                <div class="java-console-header">
+                  <span class="java-console-title">Console Output (JVM OpenJDK 21)</span>
+                  <button type="button" class="java-clear-btn" id="clearConsoleBtn">Clear</button>
+                </div>
+                <pre id="javaConsoleOutput" style="font-family: inherit; margin: 0; white-space: pre-wrap;">// Click '▶ Run Java Code' to compile and execute.</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Certificates</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="certificate-slider reveal" data-certificate-slider>
+          <button class="certificate-arrow certificate-prev" type="button" aria-label="Previous certificate">
+            &#8592;
+          </button>
+
+          <div class="certificate-viewport">
+            <div class="certificate-track">
+              <article class="certificate-card is-active">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/certificate-01.jpg" alt="Certificate 1" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 01</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">01</span>
+                  <h3>Java Programming Student</h3>
+                  <p>Enthusiastic learner with foundational knowledge in Java programming gained through hands on coursework. Familiar with core programming concepts, object oriented programming (OOP) principles, and basic algorithm design. Eager to build practical software development skills and apply them in real world projects.</p>
+                </div>
+              </article>
+
+              <article class="certificate-card">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/certificate-02.jpg" alt="Certificate 2" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 02</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">02</span>
+                  <h3>Java Programming Teacher</h3>
+                  <p>Experienced former Java programming instructor with a solid background in teaching core coding concepts, object-oriented programming (OOP), and logical problem-solving. Skilled at explaining complex technical topics clearly to beginner students and guiding them through practical coding exercises.</p>
+                </div>
+              </article>
+
+              <article class="certificate-card">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/Cybersecurity Excellence Certificate_1.png" alt="Certificate 3" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 03</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">03</span>
+                  <h3>Cyber Security Engineer Bootcamp.</h3>
+                  <p>Successfully completed the Online Cyber Security Engineer Bootcamp Batch #25 organized by Merdeka Siber and received a Certificate of Excellence in recognition of achievement. The program covered cybersecurity training modules designed to strengthen technical knowledge and understanding of cybersecurity concepts. This achievement reflects a commitment to continuous learning and professional development in the field of cybersecurity.</p>
+                </div>
+              </article>
+
+              <article class="certificate-card">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/Beelingua-2025-A-cYkzcEsqNPoKD_page-0001.jpg.jpg" alt="Certificate 2" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 04</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">04</span>
+                  <h3>English Basic User (CEFR A2.2)</h3>
+                  <p>Successfully completed the Beelingua English A2.2-level course provided by BINUS University. This course helped develop foundational English language skills, including basic communication, vocabulary, and understanding everyday expressions. The program provided a foundation for further English language development in academic and professional environments.</p>
+                </div>
+              </article>
+
+              <article class="certificate-card">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/Beelingua-2026-B-NW3MeI3ylli0X (1)_page-0001.jpg.jpg" alt="Certificate 2" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 05</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">05</span>
+                  <h3>English Independent User (CEFR B2.2)</h3>
+                  <p>Successfully completed the Beelingua English B2.2-level course provided by BINUS University. This achievement reflects the development of upper-intermediate English proficiency, supporting effective communication, comprehension of more complex materials, and the ability to express ideas in academic and professional contexts. The course contributes to continued development of English communication skills for future career opportunities.</p>
+                </div>
+              </article>
+
+              <article class="certificate-card">
+                <div class="certificate-image-wrap">
+                  <img src="assets/certificates/RADEN ALEXANDER CHRISTIANACE DEVENTA _page-0001,jpg.jpg" alt="Certificate 2" loading="lazy" />
+                  <div class="certificate-placeholder">
+                    <span>Certificate 06</span>
+                    <small>Replace this image with your certificate.</small>
+                  </div>
+                </div>
+                <div class="certificate-info">
+                  <span class="certificate-number">06</span>
+                  <h3>Career Development Seminar</h3>
+                  <p>Participated in the BINUS Festival Career Seminar Series, a hybrid seminar featuring PT Astra Otoparts Tbk, titled “Career Development with ASTRA OTOPARTS.” The event provided insights into career development, professional growth, and industry perspectives. This experience broadened my understanding of workplace expectations and the importance of preparing for future career opportunities.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="certificate-arrow certificate-next" type="button" aria-label="Next certificate">
+            &#8594;
+          </button>
+        </div>
+
+        <div class="certificate-controls reveal">
+          <div class="certificate-dots" aria-label="Certificate navigation"></div>
+          <p>Swipe or use the arrows to view the next certificate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Education</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 — Present</div>
+            <div class="timeline-content">
+              <p class="timeline-type">EDUCATION</p>
+              <h3>Bina Nusantara University</h3>
+              <h4>Computer Science — Cyber Security</h4>
+              <p>
+                Studying programming, databases, networking, software development,
+                cybersecurity, and computer science fundamentals.
+              </p>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — 2024</div>
+            <div class="timeline-content">
+              <p class="timeline-type">EDUCATION</p>
+              <h3>SMAK Kesuma Mataram</h3>
+              <h4>Natural Science</h4>
+              <p>
+                 Developed academic fundamentals while participating in organizational
+                and creative activities.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — 2023</div>
+            <div class="timeline-content">
+              <p class="timeline-type">EDUCATION</p>
+              <h3>SMA Pangudi Luhur Van Lith</h3>
+              <h4>Natural Science</h4>
+              <p>
+                Developed academic fundamentals while participating in organizational
+                and creative activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-number"></p>
+          <h2>Experience</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <!-- Experience Filter Switcher -->
+        <div class="timeline-filter-bar reveal">
+          <button type="button" class="timeline-chip active" data-filter="all">All (14)</button>
+          <button type="button" class="timeline-chip" data-filter="work">Work & Freelance (6)</button>
+          <button type="button" class="timeline-chip" data-filter="org">Organizations (6)</button>
+          <button type="button" class="timeline-chip" data-filter="education">Education (2)</button>
+        </div>
+
+        <h3 class="experience-subheading">Work Experience</h3>
+        <div class="timeline">
+          <!-- WORK EXPERIENCE 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <p class="timeline-type">VOLUNTEER</p>
+              <h3>Graduation Video Production</h3>
+              <h4>Volunteer</h4>
+              <p>
+                ▸ Recorded event moments and operated drone for aerial shots.<br>
+                ▸ Sorted and reviewed footage; assisted photo editing.
+              </p>
+            </div>
+          </div>
+
+          <!-- WORK EXPERIENCE 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — 2024</div>
+            <div class="timeline-content">
+              <p class="timeline-type">FREELANCE</p>
+              <h3>Freelance</h3>
+              <h4>Vaporista</h4>
+              <p>
+                ▸ Worked as a freelance vaporista at a vape store.<br>
+                ▸ Managed and monitored store inventory.<br>
+                ▸ Developed a store management website for internal operations.<br>
+                ▸ Built an online purchasing application for customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- WORK EXPERIENCE 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <p class="timeline-type">CONTENT CREATOR</p>
+              <h3>Mandalika MotoGP</h3>
+              <h4>Content Creator</h4>
+              <p>
+                ▸ Captured pit footage and recorded corners for dynamic racing shots.<br>
+                ▸ Operated drone during breaks for after-movie.<br>
+                ▸ Assisted in photo editing.
+              </p>
+            </div>
+          </div>
+
+          <!-- WORK EXPERIENCE 4 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 — 2023</div>
+            <div class="timeline-content">
+              <p class="timeline-type">INTERNSHIP</p>
+              <h3>Studio Photography</h3>
+              <h4>Photoshoot Coordinator</h4>
+              <p>
+                ▸ Worked as studio photographer in Bandung.<br>
+                ▸ Assisted clients with posing and shot angles.<br>
+                ▸ Sorted photos before client selection.
+              </p>
+            </div>
+          </div>
+
+          <!-- WORK EXPERIENCE 5 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — 2022</div>
+            <div class="timeline-content">
+              <p class="timeline-type">FREELANCE</p>
+              <h3>Freelance</h3>
+              <h4>Head Barista</h4>
+              <p>
+                ▸ Worked as a freelance barista at a coffee shop in Yogyakarta.<br>
+                ▸ Monitored and managed coffee bean stock and supplies.<br>
+                ▸ Managed inventory of beverage and food ingredients.
+              </p>
+            </div>
+          </div>
+
+          <!-- WORK EXPERIENCE 6 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — 2022</div>
+            <div class="timeline-content">
+              <p class="timeline-type">FREELANCE</p>
+              <h3>Freelance</h3>
+              <h4>Backend Developer &amp; Security Backend Engineer</h4>
+              <p>
+                ▸ Worked remotely as Backend Developer and Security Backend Engineer at a mining company.<br>
+                ▸ Conducted API security audits and assessments.<br>
+                ▸ Implemented database access restrictions and security layers.<br>
+                ▸ Applied secure coding practices across backend systems.<br>
+                ▸ Performed penetration testing (Pentest) on company infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="experience-subheading">Organization Experience</h3>
+        <div class="timeline">
+          <!-- ORGANIZATION EXPERIENCE 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">PRESENT</div>
+            <div class="timeline-content">
+              <p class="timeline-type">STUDENT ORGANIZATION</p>
+              <h3>ISACA Student Group</h3>
+              <h4>Media Division</h4>
+              <p>
+                ▸ Part of the ISACA Indonesia Chapter student organization.<br>
+                ▸ Served as a member of the Media Division.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORGANIZATION EXPERIENCE 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2026</div>
+            <div class="timeline-content">
+              <p class="timeline-type">ORGANIZATION</p>
+              <h3>KMK</h3>
+              <h4>Vice Head of Logistics Division</h4>
+              <p>
+                ▸ Replaced division head when needed.<br>
+                ▸ Prepared inventory list for events and determined procurement needs.<br>
+                ▸ Collaborated on event planning.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORGANIZATION EXPERIENCE 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025 — 2026</div>
+            <div class="timeline-content">
+              <p class="timeline-type">INSTRUCTOR</p>
+              <h3>BNCC</h3>
+              <h4>Java Programming Instructor</h4>
+              <p>
+                ▸ Taught Java from basic to advanced level.<br>
+                ▸ Created teaching modules and assignments for each session.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORGANIZATION EXPERIENCE 4 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <p class="timeline-type">ORGANIZATION</p>
+              <h3>KMK</h3>
+              <h4>Logistics Division</h4>
+              <p>
+                ▸ Helped prepare event materials and equipment.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORGANIZATION EXPERIENCE 5 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — 2023</div>
+            <div class="timeline-content">
+              <p class="timeline-type">ORGANIZATION</p>
+              <h3>OSIS</h3>
+              <h4>Head of Boys Dormitory Creativity &amp; Entertainment</h4>
+              <p>
+                ▸ Organized entertainment events for dorm students.<br>
+                ▸ Collaborated with dorm staff to manage activities.
+              </p>
+            </div>
+          </div>
+
+          <!-- ORGANIZATION EXPERIENCE 6 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — 2023</div>
+            <div class="timeline-content">
+              <p class="timeline-type">ORGANIZATION</p>
+              <h3>OSIS</h3>
+              <h4>School &amp; Dorm Orientation Committee — Coordinator of Media, Documentation &amp; Logistics</h4>
+              <p>
+                ▸ Coordinated documentation and equipment preparation.<br>
+                ▸ Directed team workflow and logistics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="section-number"></p>
+          <h2>Let's Work<br>Together.</h2>
+          <p>
+            Interested in collaborating, discussing technology, or working on a project?
+            Feel free to contact me.
+          </p>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+            <button class="btn btn-primary" id="copyEmail" type="button">Copy Email</button>
+            <button class="btn btn-outline" type="button" onclick="CyberTerminal.open()">&gt;_ Open Terminal</button>
+          </div>
+
+          <!-- Direct Links -->
+          <div class="contact-links" style="margin-top: 36px;">
+            <a href="mailto:radenalexander14@gmail.com" class="contact-item">
+              <div>
+                <span>Email</span>
+                <strong>radenalexander14@gmail.com</strong>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/radenalexander/" target="_blank" rel="noopener" class="contact-item">
+              <div>
+                <span>LinkedIn</span>
+                <strong>radenalexander</strong>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a href="https://github.com/radenalexander14" target="_blank" rel="noopener" class="contact-item">
+              <div>
+                <span>GitHub</span>
+                <strong>radenalexander14</strong>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a href="https://instagram.com/christian.alxnd" target="_blank" rel="noopener" class="contact-item">
+              <div>
+                <span>Instagram</span>
+                <strong>@christian.alxnd</strong>
+              </div>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <h3>Send a Direct Message</h3>
+          <p>Fill in the form and your message will be sent straight to my inbox.</p>
+
+          <form class="contact-form" id="interactiveContactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px;height:0;overflow:hidden;">
+              <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+            <div class="form-group">
+              <label>Topic / Subject</label>
+              <div class="subject-pills">
+                <button type="button" class="subject-pill active" data-subject="General Inquiry">General Inquiry</button>
+                <button type="button" class="subject-pill" data-subject="Cybersecurity Audit">Cybersecurity Audit</button>
+                <button type="button" class="subject-pill" data-subject="Web Development Inquiry">Web Development</button>
+                <button type="button" class="subject-pill" data-subject="Collaboration Proposal">Collaboration</button>
+              </div>
+              <input type="hidden" id="contactSubject" name="subject" value="General Inquiry" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" class="form-control" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" name="email" class="form-control" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Your Message</label>
+              <textarea id="contactMessage" name="message" class="form-control" placeholder="Write your project details or inquiries here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+              <span>Send Message ↗</span>
+            </button>
+            <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Designed & built by Alexander.</p>
+      <p>© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BOTTOM HUD CONTROLS -->
+  <div class="hud-bottom-left">
+    <button type="button" class="hud-btn" id="fxToggleBtn" aria-label="Toggle Background FX">⚡ FX: CONSTELLATION</button>
+  </div>
+
+  <button type="button" class="terminal-launcher-btn" id="terminalLauncherBtn" aria-label="Launch Cyber Terminal">
+    <span class="terminal-dot-ping"></span>
+    <span>&gt;_ CYBER TERMINAL</span>
+  </button>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- CYBER SECURITY TERMINAL MODAL -->
+  <div class="cyber-terminal-modal" id="terminalModal" aria-hidden="true">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <button type="button" class="terminal-dot close" id="terminalCloseBtn" aria-label="Close Terminal"></button>
+          <button type="button" class="terminal-dot min" id="terminalMinBtn" aria-label="Minimize Terminal"></button>
+          <button type="button" class="terminal-dot max" id="terminalMaxBtn" aria-label="Maximize Terminal"></button>
+        </div>
+        <div class="terminal-title">
+          <span>alexander@security-core:~$</span>
+          <span class="terminal-status-badge">ONLINE</span>
+        </div>
+        <div style="width: 48px;"></div>
+      </div>
+
+      <div class="terminal-quick-actions">
+        <span class="terminal-quick-label">Quick Commands:</span>
+        <button type="button" class="term-chip" data-cmd="help">help</button>
+        <button type="button" class="term-chip" data-cmd="whoami">whoami</button>
+        <button type="button" class="term-chip" data-cmd="skills">skills</button>
+        <button type="button" class="term-chip" data-cmd="projects">projects</button>
+        <button type="button" class="term-chip" data-cmd="scan">scan</button>
+        <button type="button" class="term-chip" data-cmd="matrix">matrix</button>
+        <button type="button" class="term-chip" data-cmd="decrypt">decrypt</button>
+        <button type="button" class="term-chip" data-cmd="sudo hire">sudo hire</button>
+        <button type="button" class="term-chip" data-cmd="clear">clear</button>
+      </div>
+
+      <div class="terminal-body" id="terminalOutput">
+        <div class="term-line term-output accent">Alexander Cyber Core Shell [Version 2.4.0-release]</div>
+        <div class="term-line term-output success">Type 'help' for available commands or tap the quick pills above.</div>
+      </div>
+
+      <div class="terminal-input-row" style="padding: 12px 20px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.06);">
+        <span class="term-prompt">alexander@sec-core:~$</span>
+        <input type="text" class="term-input" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type a command and press Enter..." />
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE (CTRL + K) -->
+  <div class="cmd-palette-modal" id="cmdPaletteModal" aria-hidden="true">
+    <div class="cmd-palette-box">
+      <div class="cmd-palette-header">
+        <span class="cmd-search-icon">⌘</span>
+        <input type="text" class="cmd-input" id="cmdInput" placeholder="Type a command or search..." autocomplete="off" spellcheck="false" />
+        <button type="button" class="cmd-close-btn" id="cmdCloseBtn">ESC</button>
+      </div>
+      <ul class="cmd-list" id="cmdList"></ul>
+      <div class="cmd-palette-footer">
+        <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>↵</kbd> to select</span>
+        <span>Alexander Quick HUD</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT QUICK-VIEW MODAL -->
+  <div class="project-modal" id="projectDetailModal" aria-hidden="true">
+    <div class="project-modal-content">
+      <button type="button" class="project-modal-close" id="projModalClose" aria-label="Close Modal">×</button>
+      <div style="font-size: 0.76rem; font-weight: 800; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;">Project Details</div>
+      <h3 id="projModalTitle" style="font-family: 'Space Grotesk', sans-serif; font-size: 2rem; margin: 10px 0 16px;">Project Title</h3>
+      <p id="projModalDesc" style="color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"></p>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; margin-bottom: 10px;">Architecture Workflow</h4>
+        <div id="projModalArch" style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; font-family: 'Consolas', monospace; font-size: 0.88rem; color: var(--text); line-height: 1.6;"></div>
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; margin-bottom: 10px;">Technologies</h4>
+        <div class="project-tech" id="projModalStack"></div>
+      </div>
+
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="#interactive-labs" class="btn btn-primary" onclick="document.getElementById('projectDetailModal').classList.remove('open');">Open Interactive Lab ↗</a>
+        <a href="#contact" class="btn btn-outline" onclick="document.getElementById('projectDetailModal').classList.remove('open');">Discuss This Project ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX & TOAST -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img alt="Certificate preview">
+    <button class="lightbox-close" aria-label="Close">×</button>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="i18n.js"></script>
+  <script src="enhance.js"></script>
+  <script src="interactive.js"></script>
+</body>
+</html>

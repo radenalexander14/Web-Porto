@@ -1,0 +1,188 @@
+/* EN <-> ID language switch. English = original HTML text. Add new pairs to ID below. */
+(() => {
+  const ID = {
+    "RADEN ALEXANDER | Portfolio": "RADEN ALEXANDER | Portofolio",
+    "Home": "Beranda", "About": "Tentang", "Skills": "Keahlian", "Projects": "Proyek", "Certificates": "Sertifikat", "Education": "Pendidikan", "Experience": "Pengalaman", "Contact": "Kontak",
+    "Interactive Labs": "Lab Interaktif", "Labs": "Lab Interaktif", "Search...": "Cari...",
+    "Switch Look": "Ganti Tampilan", "OPEN FOR WORK & COLLAB": "SIAP KERJA & KOLABORASI",
+    "HELLO, I'M": "HALO, SAYA",
+    "Computer Science student focusing on Cyber Security, Web Development, Java programming, multimedia, and digital creative work.": "Mahasiswa Ilmu Komputer yang berfokus pada Keamanan Siber, Pengembangan Web, pemrograman Java, multimedia, dan karya kreatif digital.",
+    "View My Work": "Lihat Karya Saya", "Contact Me": "Hubungi Saya",
+    "</> Developer": "</> Developer", "Cyber Security": "Keamanan Siber", "Creative": "Kreatif", "Scroll": "Gulir",
+    "Launch Cyber Terminal >_": "Buka Terminal Siber >_",
+    "About Me": "Tentang Saya",
+    "I'm a Computer Science student with a strong interest in": "Saya mahasiswa Ilmu Komputer dengan minat besar pada",
+    "Cyber Security, software development, web design, and multimedia.": "Keamanan Siber, pengembangan perangkat lunak, desain web, dan multimedia.",
+    "I enjoy learning how systems work, building applications, solving technical problems, and combining technology with creative ideas.": "Saya senang mempelajari cara kerja sistem, membangun aplikasi, memecahkan masalah teknis, dan memadukan teknologi dengan ide kreatif.",
+    "My current focus includes web development, Java programming, information gathering, cybersecurity automation, and AI-based applications.": "Fokus saya saat ini meliputi pengembangan web, pemrograman Java, information gathering, otomasi keamanan siber, dan aplikasi berbasis AI.",
+    "Started Computer Science": "Mulai Kuliah Ilmu Komputer", "Current GPA": "IPK Saat Ini", "Fields of Interest": "Bidang Minat", "Things to Learn": "Hal untuk Dipelajari",
+    "Skills & Tools": "Keahlian & Alat",
+    "Nmap, information gathering, basic vulnerability analysis, networking.": "Nmap, information gathering, analisis kerentanan dasar, jaringan.",
+    "Networking": "Jaringan",
+    "Web Development": "Pengembangan Web",
+    "Building responsive websites and web applications.": "Membangun website responsif dan aplikasi web.",
+    "Java Development": "Pengembangan Java",
+    "Object-oriented programming, desktop GUI, and database applications.": "Pemrograman berorientasi objek, GUI desktop, dan aplikasi basis data.",
+    "Artificial Intelligence": "Kecerdasan Buatan",
+    "Exploring NLP, translation systems, OCR, and AI-assisted automation.": "Mengeksplorasi NLP, sistem terjemahan, OCR, dan otomasi berbantuan AI.",
+    "Design": "Desain",
+    "Creating visual concepts, website layouts, posters, and digital content.": "Membuat konsep visual, tata letak website, poster, dan konten digital.",
+    "UI Design": "Desain UI",
+    "Content & Writing": "Konten & Penulisan",
+    "Content planning, writing, documentation, and digital communication.": "Perencanaan konten, penulisan, dokumentasi, dan komunikasi digital.",
+    "Writing": "Penulisan", "Content": "Konten", "Research": "Riset",
+    "Selected Projects": "Proyek Pilihan", "Security": "Keamanan", "Web": "Web",
+    "Featured Project": "Proyek Unggulan",
+    "Indonesia ↔ Banjar AI Translator": "Penerjemah AI Indonesia ↔ Banjar",
+    "Neural Machine Translation application for Indonesian and Banjar languages, supported by OCR and a web-based interface.": "Aplikasi Neural Machine Translation untuk bahasa Indonesia dan Banjar, didukung OCR dan antarmuka berbasis web.",
+    "Live Demo ↗": "Demo Langsung ↗",
+    "Information Gathering Automation": "Otomasi Information Gathering",
+    "Concept framework that combines Nmap scanning, vulnerability database fetching, and AI-assisted analysis.": "Kerangka konsep yang menggabungkan pemindaian Nmap, pengambilan basis data kerentanan, dan analisis berbantuan AI.",
+    "View Project ↗": "Lihat Proyek ↗",
+    "Healthcare Website Accessibility": "Aksesibilitas Website Layanan Kesehatan",
+    "Evaluation of Indonesian healthcare websites based on WCAG 2.1 Level AA using automated and manual testing.": "Evaluasi website layanan kesehatan Indonesia berdasarkan WCAG 2.1 Level AA dengan pengujian otomatis dan manual.",
+    "Read More ↗": "Baca Selengkapnya ↗",
+    "Laravel Web Application": "Aplikasi Web Laravel",
+    "Web application built with Laravel and MySQL featuring authentication, database integration, and front-end asset management.": "Aplikasi web berbasis Laravel dan MySQL dengan autentikasi, integrasi basis data, dan pengelolaan aset front-end.",
+    "⚡ Try Live AI Demo": "⚡ Coba Demo AI Langsung",
+    "Inspect Architecture ↗": "Lihat Arsitektur ↗",
+    "Certificate 01": "Sertifikat 01", "Certificate 02": "Sertifikat 02", "Certificate 03": "Sertifikat 03",
+    "Certificate 04": "Sertifikat 04", "Certificate 05": "Sertifikat 05", "Certificate 06": "Sertifikat 06",
+    "Cyber Security Engineer Bootcamp.": "Bootcamp Cyber Security Engineer.",
+    "Successfully completed the Online Cyber Security Engineer Bootcamp Batch #25 organized by Merdeka Siber and received a Certificate of Excellence in recognition of achievement. The program covered cybersecurity training modules designed to strengthen technical knowledge and understanding of cybersecurity concepts. This achievement reflects a commitment to continuous learning and professional development in the field of cybersecurity.": "Berhasil menyelesaikan Online Cyber Security Engineer Bootcamp Batch #25 yang diselenggarakan oleh Merdeka Siber dan menerima Certificate of Excellence sebagai bentuk pengakuan atas pencapaian. Program ini mencakup modul pelatihan keamanan siber yang dirancang untuk memperkuat pengetahuan teknis dan pemahaman konsep keamanan siber. Pencapaian ini mencerminkan komitmen terhadap pembelajaran berkelanjutan dan pengembangan profesional di bidang keamanan siber.",
+    "English Basic User (CEFR A2.2)": "Pengguna Dasar Bahasa Inggris (CEFR A2.2)",
+    "Successfully completed the Beelingua English A2.2-level course provided by BINUS University. This course helped develop foundational English language skills, including basic communication, vocabulary, and understanding everyday expressions. The program provided a foundation for further English language development in academic and professional environments.": "Berhasil menyelesaikan kursus Beelingua English level A2.2 yang disediakan oleh BINUS University. Kursus ini membantu mengembangkan keterampilan dasar bahasa Inggris, termasuk komunikasi dasar, kosakata, dan pemahaman ungkapan sehari-hari. Program ini menjadi fondasi bagi pengembangan bahasa Inggris lebih lanjut di lingkungan akademik dan profesional.",
+    "English Independent User (CEFR B2.2)": "Pengguna Mandiri Bahasa Inggris (CEFR B2.2)",
+    "Successfully completed the Beelingua English B2.2-level course provided by BINUS University. This achievement reflects the development of upper-intermediate English proficiency, supporting effective communication, comprehension of more complex materials, and the ability to express ideas in academic and professional contexts. The course contributes to continued development of English communication skills for future career opportunities.": "Berhasil menyelesaikan kursus Beelingua English level B2.2 yang disediakan oleh BINUS University. Pencapaian ini mencerminkan berkembangnya kemampuan bahasa Inggris tingkat menengah-atas, yang mendukung komunikasi efektif, pemahaman materi yang lebih kompleks, dan kemampuan mengekspresikan ide dalam konteks akademik dan profesional. Kursus ini berkontribusi pada pengembangan keterampilan komunikasi bahasa Inggris untuk peluang karier di masa depan.",
+    "Career Development Seminar": "Seminar Pengembangan Karier",
+    "Participated in the BINUS Festival Career Seminar Series, a hybrid seminar featuring PT Astra Otoparts Tbk, titled “Career Development with ASTRA OTOPARTS.” The event provided insights into career development, professional growth, and industry perspectives. This experience broadened my understanding of workplace expectations and the importance of preparing for future career opportunities.": "Mengikuti BINUS Festival Career Seminar Series, seminar hybrid bersama PT Astra Otoparts Tbk, bertajuk “Career Development with ASTRA OTOPARTS.” Acara ini memberikan wawasan tentang pengembangan karier, pertumbuhan profesional, dan perspektif industri. Pengalaman ini memperluas pemahaman saya tentang ekspektasi dunia kerja dan pentingnya mempersiapkan peluang karier di masa depan.",
+    "Replace this image with your certificate.": "Ganti gambar ini dengan sertifikat Anda.",
+    "Java Programming Student": "Pelajar Pemrograman Java",
+    "Enthusiastic learner with foundational knowledge in Java programming gained through hands on coursework. Familiar with core programming concepts, object oriented programming (OOP) principles, and basic algorithm design. Eager to build practical software development skills and apply them in real world projects.": "Pembelajar antusias dengan pengetahuan dasar pemrograman Java yang diperoleh lewat praktik langsung di perkuliahan. Memahami konsep inti pemrograman, prinsip pemrograman berorientasi objek (OOP), dan perancangan algoritma dasar. Ingin membangun keterampilan pengembangan perangkat lunak yang praktis dan menerapkannya di proyek nyata.",
+    "Java Programming Teacher": "Pengajar Pemrograman Java",
+    "Experienced former Java programming instructor with a solid background in teaching core coding concepts, object-oriented programming (OOP), and logical problem-solving. Skilled at explaining complex technical topics clearly to beginner students and guiding them through practical coding exercises.": "Mantan instruktur pemrograman Java berpengalaman dengan latar belakang kuat dalam mengajarkan konsep inti pemrograman, pemrograman berorientasi objek (OOP), dan pemecahan masalah logis. Terampil menjelaskan topik teknis yang rumit secara jelas kepada pemula serta membimbing mereka dalam latihan coding praktis.",
+    "Fundamental cybersecurity and ethical hacking course for beginners.": "Kursus dasar keamanan siber dan ethical hacking untuk pemula.",
+    "I am a tech enthusiast with a strong interest in cybersecurity and software development. I have completed a beginner-level course covering cybersecurity fundamentals and ethical hacking, alongside prior experience teaching Java programming. I am eager to apply my foundational skills and continue learning in the technology field": "Saya penggemar teknologi dengan minat besar pada keamanan siber dan pengembangan perangkat lunak. Saya telah menyelesaikan kursus tingkat pemula tentang dasar keamanan siber dan ethical hacking, serta memiliki pengalaman mengajar pemrograman Java. Saya ingin menerapkan keterampilan dasar saya dan terus belajar di bidang teknologi.",
+    "Swipe or use the arrows to view the next certificate.": "Geser atau gunakan tanda panah untuk melihat sertifikat berikutnya.",
+    "2024 — Present": "2024 — Sekarang", "EDUCATION": "PENDIDIKAN",
+    "Computer Science — Cyber Security": "Ilmu Komputer — Keamanan Siber",
+    "Studying programming, databases, networking, software development, cybersecurity, and computer science fundamentals.": "Mempelajari pemrograman, basis data, jaringan, pengembangan perangkat lunak, keamanan siber, dan dasar-dasar ilmu komputer.",
+    "Natural Science": "Ilmu Pengetahuan Alam (IPA)",
+    "Developed academic fundamentals while participating in organizational and creative activities.": "Membangun dasar akademik sambil aktif dalam kegiatan organisasi dan kreatif.",
+    "Work Experience": "Pengalaman Kerja", "VOLUNTEER": "RELAWAN",
+    "Graduation Video Production": "Produksi Video Wisuda", "Volunteer": "Relawan",
+    "▸ Recorded event moments and operated drone for aerial shots.": "▸ Merekam momen acara dan mengoperasikan drone untuk pengambilan gambar udara.",
+    "▸ Sorted and reviewed footage; assisted photo editing.": "▸ Menyortir dan meninjau rekaman; membantu penyuntingan foto.",
+    "FREELANCE": "FREELANCE",
+    "▸ Worked as a freelance vaporista at a vape store.": "▸ Bekerja sebagai vaporista freelance di toko vape.",
+    "▸ Managed and monitored store inventory.": "▸ Mengelola dan memantau stok toko.",
+    "▸ Developed a store management website for internal operations.": "▸ Mengembangkan website manajemen toko untuk operasional internal.",
+    "▸ Built an online purchasing application for customers.": "▸ Membangun aplikasi pembelian online untuk pelanggan.",
+    "CONTENT CREATOR": "KREATOR KONTEN", "Content Creator": "Kreator Konten",
+    "▸ Captured pit footage and recorded corners for dynamic racing shots.": "▸ Merekam suasana pit dan tikungan lintasan untuk visual balapan yang dinamis.",
+    "▸ Operated drone during breaks for after-movie.": "▸ Mengoperasikan drone saat jeda acara untuk after-movie.",
+    "▸ Assisted in photo editing.": "▸ Membantu penyuntingan foto.",
+    "INTERNSHIP": "MAGANG", "Studio Photography": "Fotografi Studio", "Photoshoot Coordinator": "Koordinator Pemotretan",
+    "▸ Worked as studio photographer in Bandung.": "▸ Bekerja sebagai fotografer studio di Bandung.",
+    "▸ Assisted clients with posing and shot angles.": "▸ Membantu klien soal pose dan sudut pengambilan gambar.",
+    "▸ Sorted photos before client selection.": "▸ Menyortir foto sebelum dipilih klien.",
+    "▸ Worked as a freelance barista at a coffee shop in Yogyakarta.": "▸ Bekerja sebagai barista freelance di kedai kopi di Yogyakarta.",
+    "▸ Monitored and managed coffee bean stock and supplies.": "▸ Memantau dan mengelola stok biji kopi dan perlengkapan.",
+    "▸ Managed inventory of beverage and food ingredients.": "▸ Mengelola persediaan bahan minuman dan makanan.",
+    "▸ Worked remotely as Backend Developer and Security Backend Engineer at a mining company.": "▸ Bekerja jarak jauh sebagai Backend Developer dan Security Backend Engineer di perusahaan tambang.",
+    "▸ Conducted API security audits and assessments.": "▸ Melakukan audit dan penilaian keamanan API.",
+    "▸ Implemented database access restrictions and security layers.": "▸ Menerapkan pembatasan akses basis data dan lapisan keamanan.",
+    "▸ Applied secure coding practices across backend systems.": "▸ Menerapkan praktik secure coding di seluruh sistem backend.",
+    "▸ Performed penetration testing (Pentest) on company infrastructure.": "▸ Melakukan penetration testing (Pentest) pada infrastruktur perusahaan.",
+    "Organization Experience": "Pengalaman Organisasi", "PRESENT": "SEKARANG", "STUDENT ORGANIZATION": "ORGANISASI MAHASISWA",
+    "Media Division": "Divisi Media",
+    "▸ Part of the ISACA Indonesia Chapter student organization.": "▸ Bagian dari organisasi mahasiswa ISACA Indonesia Chapter.",
+    "▸ Served as a member of the Media Division.": "▸ Menjadi anggota Divisi Media.",
+    "ORGANIZATION": "ORGANISASI",
+    "Vice Head of Logistics Division": "Wakil Ketua Divisi Logistik",
+    "▸ Replaced division head when needed.": "▸ Menggantikan ketua divisi saat diperlukan.",
+    "▸ Prepared inventory list for events and determined procurement needs.": "▸ Menyusun daftar inventaris acara dan menentukan kebutuhan pengadaan.",
+    "▸ Collaborated on event planning.": "▸ Berkolaborasi dalam perencanaan acara.",
+    "INSTRUCTOR": "INSTRUKTUR", "Java Programming Instructor": "Instruktur Pemrograman Java",
+    "▸ Taught Java from basic to advanced level.": "▸ Mengajar Java dari tingkat dasar hingga lanjut.",
+    "▸ Created teaching modules and assignments for each session.": "▸ Membuat modul ajar dan tugas untuk setiap sesi.",
+    "Logistics Division": "Divisi Logistik",
+    "▸ Helped prepare event materials and equipment.": "▸ Membantu menyiapkan materi dan peralatan acara.",
+    "Head of Boys Dormitory Creativity & Entertainment": "Ketua Kreativitas & Hiburan Asrama Putra",
+    "▸ Organized entertainment events for dorm students.": "▸ Menyelenggarakan acara hiburan untuk siswa asrama.",
+    "▸ Collaborated with dorm staff to manage activities.": "▸ Berkoordinasi dengan pengelola asrama untuk mengatur kegiatan.",
+    "School & Dorm Orientation Committee — Coordinator of Media, Documentation & Logistics": "Panitia Orientasi Sekolah & Asrama — Koordinator Media, Dokumentasi & Logistik",
+    "▸ Coordinated documentation and equipment preparation.": "▸ Mengoordinasi dokumentasi dan persiapan peralatan.",
+    "▸ Directed team workflow and logistics.": "▸ Mengarahkan alur kerja tim dan logistik.",
+    "Let's Work": "Ayo Bekerja", "Together.": "Bersama.",
+    "Interested in collaborating, discussing technology, or working on a project? Feel free to contact me.": "Tertarik berkolaborasi, berdiskusi soal teknologi, atau mengerjakan proyek? Silakan hubungi saya.",
+    "Copy Email": "Salin Email",
+    "Designed & built by Alexander.": "Dirancang & dibuat oleh Alexander.",
+    "All rights reserved.": "Hak cipta dilindungi.",
+
+    /* NEW INTERACTIVE SECTION TRANSLATIONS */
+    "Interactive Labs & Demos": "Lab Interaktif & Demo",
+    "Explore real-time simulated AI, cybersecurity reconnaissance, and Java code execution directly in your browser.": "Jelajahi simulasi AI real-time, pengintaian keamanan siber, dan eksekusi kode Java langsung di browser Anda.",
+    "AI Translator Simulator": "Simulator Penerjemah AI",
+    "Cyber Security Lab": "Lab Keamanan Siber",
+    "Java OOP Playground": "Playground Java OOP",
+    "SOURCE (INDONESIAN)": "SUMBER (BAHASA INDONESIA)",
+    "TARGET (BANJAR)": "HASIL (BAHASA BANJAR)",
+    "Translate with Neural Model": "Terjemahkan dengan Model Neural",
+    "Sample Presets:": "Contoh Cepat:",
+    "Password Entropy & Threat Shield": "Entropi Kata Sandi & Pelindung Ancaman",
+    "Calculate Shannon entropy and brute-force cracking resistance in real time.": "Hitung entropi Shannon dan ketahanan terhadap brute-force secara real-time.",
+    "Type password or token to test...": "Ketik kata sandi atau token untuk diuji...",
+    "Reconnaissance Port Scanner": "Pemindai Port Reconnaissance",
+    "Simulate Nmap stealth SYN port discovery and vulnerability analysis.": "Simulasikan pemindaian port SYN Nmap dan analisis kerentanan.",
+    "Launch Recon": "Jalankan Recon",
+    "Java OOP & Security Runner": "Runner OOP & Keamanan Java",
+    "Interactive JVM execution with real-time compilation console.": "Eksekusi JVM interaktif dengan konsol kompilasi real-time.",
+    "▶ Run Java Code": "▶ Jalankan Kode Java",
+    "All (14)": "Semua (14)",
+    "Work & Freelance (6)": "Pekerjaan & Freelance (6)",
+    "Organizations (6)": "Organisasi (6)",
+    "Education (2)": "Pendidikan (2)",
+    "Send a Direct Message": "Kirim Pesan Langsung",
+    "Fill in the form and your message will be sent straight to my inbox.": "Isi formulir dan pesan Anda akan langsung dikirim ke kotak masuk saya.",
+    "Your Name": "Nama Anda",
+    "Your Email": "Email Anda",
+    "Topic / Subject": "Topik / Subjek",
+    "Your Message": "Pesan Anda",
+    "Send Message ↗": "Kirim Pesan ↗",
+    "General Inquiry": "Pertanyaan Umum",
+    "Cybersecurity Audit": "Audit Keamanan Siber",
+    "Web Development Inquiry": "Proyek Pengembangan Web",
+    "Collaboration Proposal": "Ajakan Kolaborasi",
+    "Collaboration": "Kolaborasi"
+  };
+
+  const ROLES = {
+    en: ["IT Specialist | Cyber Security", "Web Developer", "Java Programming Instructor", "Content Creator"],
+    id: ["IT Specialist | Keamanan Siber", "Web Developer", "Instruktur Pemrograman Java", "Kreator Konten"]
+  };
+  const norm = s => s.replace(/\s+/g, " ").trim();
+  const nodes = [];
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => (n.parentElement.closest("script,style,#typed,.lightbox,#terminalModal") || !norm(n.nodeValue)) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  while (w.nextNode()) nodes.push({ n: w.currentNode, o: w.currentNode.nodeValue });
+  const origTitle = document.title;
+  const btns = [...document.querySelectorAll(".lang-switch button")];
+
+  function setLang(lang, save = true) {
+    nodes.forEach(({ n, o }) => {
+      const k = norm(o), t = lang === "id" ? ID[k] : null;
+      n.nodeValue = t ? o.match(/^\s*/)[0] + t + o.match(/\s*$/)[0] : o;
+    });
+    document.title = lang === "id" ? ID[origTitle] || origTitle : origTitle;
+    document.documentElement.lang = lang;
+    window.__lang = lang;
+    window.TYPED_ROLES = ROLES[lang];
+    btns.forEach(b => { const on = b.dataset.lang === lang; b.classList.toggle("active", on); b.setAttribute("aria-pressed", on); });
+    if (save) localStorage.setItem("portfolio-lang", lang);
+    dispatchEvent(new Event("langchange"));
+  }
+  btns.forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+  setLang(localStorage.getItem("portfolio-lang") === "id" ? "id" : "en", false);
+})();

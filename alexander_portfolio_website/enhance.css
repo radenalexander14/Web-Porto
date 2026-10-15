@@ -1,0 +1,60 @@
+/* ===== Interactive layer (loaded after style.css) ===== */
+.progress-bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),#9b5cff);z-index:2000;transition:width .1s linear}
+.caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:4px;vertical-align:-0.12em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* Hero mouse spotlight */
+.hero{background-image:radial-gradient(520px circle at var(--hx,70%) var(--hy,30%),rgba(31,87,255,.10),transparent 60%)}
+body.dark .hero{background-image:radial-gradient(520px circle at var(--hx,70%) var(--hy,30%),rgba(111,140,255,.14),transparent 60%)}
+
+/* Floating tags gentle motion */
+.floating-tag{animation:floaty 5s ease-in-out infinite}
+.tag-2{animation-delay:-1.6s}.tag-3{animation-delay:-3.2s}
+@keyframes floaty{50%{transform:translateY(-9px)}}
+
+/* Tilt + spotlight cards */
+.tilt{transform-style:preserve-3d}
+.tilt.visible{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:opacity .8s ease,transform .18s ease-out,border-color .25s,box-shadow .25s}
+.tilt:hover{border-color:var(--accent);box-shadow:var(--shadow);background-image:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),rgba(31,87,255,.13),transparent 60%)}
+body.dark .tilt:hover{background-image:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),rgba(111,140,255,.16),transparent 60%)}
+.skill-tags span,.project-tech span{transition:transform .2s,background .2s,color .2s}
+.skill-tags span:hover,.project-tech span:hover{transform:translateY(-3px);background:var(--accent);color:#fff}
+
+/* Staggered reveal */
+.skills-grid .reveal:nth-child(3n+2){transition-delay:.1s}.skills-grid .reveal:nth-child(3n){transition-delay:.2s}
+.projects-grid .reveal:nth-child(even){transition-delay:.12s}
+
+/* Project filter */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin:-20px 0 34px}
+.chip{border:1px solid var(--border);background:var(--surface);color:var(--muted);padding:9px 20px;border-radius:999px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s}
+.chip:hover{color:var(--text);border-color:var(--text)}
+.chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.project-card.is-hidden{display:none}
+.project-card.pop{animation:pop .45s ease both}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+
+/* Certificates lightbox */
+.certificate-image-wrap.has-image img{cursor:zoom-in}
+.lightbox{position:fixed;inset:0;background:rgba(5,5,8,.88);backdrop-filter:blur(6px);display:grid;place-items:center;padding:24px;z-index:3000;opacity:0;pointer-events:none;transition:opacity .25s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:min(1100px,100%);max-height:88vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:scale(.94);transition:transform .25s}
+.lightbox.open img{transform:none}
+.lightbox-close{position:absolute;top:18px;right:22px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#111;font-size:1.6rem;cursor:pointer}
+
+/* Timeline: dot pulse on hover */
+.timeline-item:hover .timeline-dot{box-shadow:0 0 0 7px rgba(31,87,255,.18);transform:scale(1.15)}
+.timeline-dot{transition:.25s}
+.timeline-content{transition:transform .25s,border-color .25s}
+.timeline-item:hover .timeline-content{transform:translateX(6px)}
+
+/* Toast */
+.toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,30px);background:var(--text);color:var(--bg);padding:12px 22px;border-radius:999px;font-weight:700;font-size:.88rem;opacity:0;pointer-events:none;transition:.3s;z-index:3100}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){.floating-tag,.caret{animation:none}.tilt.visible{transform:none!important}}
+
+/* Language switch */
+.lang-switch{display:flex;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:3px;gap:2px}
+.lang-switch button{border:0;background:transparent;color:var(--muted);font-size:.74rem;font-weight:800;letter-spacing:.06em;padding:0 11px;height:34px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang-switch button:hover{color:var(--text)}
+.lang-switch button.active{background:var(--accent);color:#fff}
